@@ -1,0 +1,202 @@
+.button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.button:before {
+  border: 4px solid #f0eeef;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+  border: 4px solid #96daf0;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #f0eeef;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
+.font-size {
+  font-size: 30px;
+}
+.font-size:hover {
+  cursor: pointer;
+  background-color: #198754;
+  user-select: none;
+}
+.message {
+  position: relative;
+  width: 100%;
+  margin: 5px 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.message p {
+  position: relative;
+  right: 0;
+  text-align: right;
+  max-width: 65%;
+  padding: 12px;
+  background: #dcf8c8;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+.message p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(
+    135deg,
+    rgb(108, 117, 125) 0%,
+    rgb(108, 117, 125) 50%,
+    transparent 50%,
+    transparent
+  );
+}
+.my_msg p::before {
+  background: linear-gradient(
+    135deg,
+    rgb(33, 37, 41) 0%,
+    rgb(33, 37, 41) 50%,
+    transparent 50%,
+    transparent
+  );
+}
+.message p span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85em;
+  opacity: 0.5;
+}
+
+.my_msg {
+  opacity: 0.8;
+  justify-content: end;
+}
+.my_msg p {
+  margin-right: 25px;
+}
+
+.friend_msg {
+  justify-content: flex-start;
+}
+
+.friend_msg p {
+  text-align: left;
+  margin-left: 25px;
+}
+
+.message.friend_msg p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  rotate: 450deg;
+}
+
+.chat_input {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #f0f0f0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.chat_input .icon {
+  cursor: pointer;
+  font-size: 1.8em;
+  color: #51585c;
+}
+
+.chat_input .icon:nth-child(1) {
+  margin-right: 15px;
+}
+
+.chat_input input {
+  position: relative;
+  width: 95%;
+  margin: 0 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1;
+}
+.bgStatus0 {
+  background-color: #6c757d !important;
+}
+.bgStatus1 {
+  background-color: #28a745 !important;
+}
+.bgStatus2 {
+  background-color: #dc3545 !important;
+}
+.bgStatus3 {
+  background-color: #ffc107 !important;
+}
+.bgStatus4 {
+  background-color: #17a2b8 !important;
+}
